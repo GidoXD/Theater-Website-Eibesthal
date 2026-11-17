@@ -1,0 +1,471 @@
+@media (max-width: 768px) { 
+ /* ===========================================================
+    MOBILE.CSS
+    Enthält ausschließlich Mobile Overrides
+    Wird per:
+    media="screen and (max-width:600px)"
+    eingebunden
+    =========================================================== */
+
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    header {
+        padding-top: 10px;
+    }
+
+    html {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 22px 16px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    p,
+    span,
+    li,
+    a {
+        font-size: 1.1rem;
+        line-height: 1.55;
+        text-align: center;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* ===========================================================
+    HEADER / NAVIGATION
+    =========================================================== */
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 10px 5px;
+        box-sizing: border-box;
+        gap: 10px;
+    }
+
+    .logo {
+        width: 100%;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        width: 90%;
+        box-sizing: border-box;
+    }
+
+    nav a {
+        width: 100%;
+        height: 40px;
+        min-width: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        box-sizing: border-box;
+
+        padding: 0 3px;
+
+        text-align: center;
+        white-space: nowrap;
+
+        font-size: 1.2rem;
+        line-height: 1;
+
+        border: 3px solid var(--color-current-sub);
+        border-radius: 8px;
+
+        color: var(--color-current-sub);
+        text-decoration: none;
+        font-weight: 700;
+
+        overflow: hidden;
+    }
+
+    nav a.active {
+        background: var(--color-current-main);
+        color: var(--color-current-sub);
+        border-color: var(--color-current-sub);
+    }
+
+    nav a:hover {
+        background: var(--color-current-main);
+    }
+
+    /* ===========================================================
+    AKTUELLES STÜCK
+    =========================================================== */
+
+    .stueck {
+        flex-direction: column;
+        text-align: center;
+        padding: 18px;
+        gap: 18px;
+    }
+
+    .stueck img {
+        width: 100%;
+        max-width: 280px;
+        margin: auto;
+        border-radius: 12px;
+    }
+
+    #aktuelles-stueck .beschreibung {
+        text-align: center;
+        padding: 0 5px;
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+
+    #aktuelles-stueck .dates {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        width: 100% !important;
+    }
+
+    #aktuelles-stueck .dates span {
+        display: block !important;
+        width: fit-content !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* ===========================================================
+    STÜCKDETAILSEITE
+    =========================================================== */
+
+    .poster-img {
+        width: 85% !important;
+        max-width: 260px !important;
+        margin: auto;
+        display: block;
+        border-radius: 12px;
+    }
+
+    /* ===========================================================
+    ARCHIV
+    =========================================================== */
+
+    #archiv-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    #archiv-grid .card {
+        padding: 18px;
+        border-radius: 14px;
+    }
+
+    #archiv-grid .card img {
+        width: 65%;
+        max-width: 200px;
+        margin: 0 auto 10px auto;
+        display: block;
+    }
+
+    #archiv-grid .card h3 {
+        font-size: 1.4rem;
+        margin-top: 10px;
+    }
+
+    #jahr-filter {
+        text-align: center;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
+    }
+
+    #jahr-filter button {
+        font-size: 1.1rem;
+        padding: 12px 16px;
+        margin: 2px;
+        border-radius: 8px;
+        border: 3px solid #fff;
+    }
+
+    .jahr-filter-wrapper {
+        display: block;
+    }
+
+    .scroll-btn {
+        display: none;
+    }
+
+    /* ===========================================================
+    INSTAGRAM
+    =========================================================== */
+
+    .instagram-wrapper .instagram-media {
+        width: 50% !important;
+        max-width: 90% !important;
+    }
+
+    /* ===========================================================
+    TABS
+    =========================================================== */
+
+    .tabs button,
+    .tabs button.active {
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 14px;
+        border-radius: 8px;
+        margin-bottom: 8px;
+    }
+
+    .tab-content {
+        padding: 18px 14px;
+        border-radius: 14px;
+        font-size: 1.1rem;
+        line-height: 1.55;
+    }
+
+    /* ===========================================================
+    BESETZUNG
+    =========================================================== */
+
+    .cast-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .cast-card {
+        padding: 14px;
+        border-radius: 14px;
+    }
+
+    .cast-card img {
+        height: 160px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    .cast-name {
+        font-size: 1.2rem;
+    }
+
+    .cast-role {
+        font-size: 1.05rem;
+    }
+
+    /* ===========================================================
+    GALERIE
+    =========================================================== */
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .gallery img {
+        padding: 4px;
+        border-radius: 10px;
+    }
+
+    /* ===========================================================
+    KONTAKT
+    =========================================================== */
+
+    .contact-info {
+        padding: 20px;
+        border-radius: 14px;
+        font-size: 1.15rem;
+    }
+
+    .contact-info a {
+        font-size: 1.15rem;
+        padding: 6px 10px;
+        border-radius: 8px;
+    }
+
+    .contact-map iframe {
+        height: 250px;
+    }
+
+    /* ===========================================================
+    BUTTONS
+    =========================================================== */
+
+    .btn {
+        font-size: 1.15rem;
+        padding: 11px 20px;
+        border-radius: 10px;
+    }
+
+    /* ===========================================================
+    BESCHREIBUNG TOGGLE
+    =========================================================== */
+
+    .beschreibung-collapsed {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .beschreibung-expanded {
+        display: block;
+    }
+
+    .beschreibung-toggle {
+        display: block;
+        width: fit-content;
+
+        margin: 8px auto 0;
+
+        padding: 0;
+
+        background: none;
+        border: none;
+
+        color: var(--color-current-sub);
+
+        font-size: 0.85rem;
+        font-weight: 600;
+
+        text-decoration: underline;
+
+        cursor: pointer;
+        opacity: 0.7;
+    }
+
+    .beschreibung-toggle:hover {
+        opacity: 1;
+    }
+
+    /* ===========================================================
+    SCROLL HINT
+    =========================================================== */
+
+    .mobile-scroll-hint {
+        display: flex;
+
+        justify-content: center;
+        gap: 50px;
+
+        color: var(--color-current-sub);
+
+        font-size: 1.2rem;
+        font-weight: 700;
+
+        opacity: 0.5;
+        margin-bottom: 8px;
+
+        animation: pulseHint 1.8s infinite;
+    }
+
+    @keyframes pulseHint {
+        0%,
+        100% {
+            opacity: 0.3;
+        }
+
+        50% {
+            opacity: 0.8;
+        }
+    }
+
+    /* ===========================================================
+    ABOUT PAGE
+    =========================================================== */
+
+    .about-hero {
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+
+    .about-content {
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 14px;
+    }
+
+    .about-intro {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    .about-section p {
+        line-height: 1.65;
+    }
+
+    .about-leadership {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin: 25px auto;
+    }
+
+    .about-person {
+        padding: 20px;
+    }
+
+    .leadership-history div {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+
+    .helpers-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-top: 25px;
+    }
+
+    .helper-card {
+        padding: 20px;
+    }
+
+    .helper-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .helper-card p {
+        font-size: 1.05rem;
+        line-height: 1.55;
+    }
+
+    .about-end {
+        padding-top: 35px;
+        padding-bottom: 55px;
+    }
+
+    .about-highlight {
+        font-size: 1.1rem;
+    }
+}
