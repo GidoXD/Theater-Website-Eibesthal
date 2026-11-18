@@ -1,18 +1,17 @@
-﻿/* ===========================================================
+﻿
+/* ===========================================================
    THEATER WEBSITE – STYLESHEET
    Strukturierter und kommentierter Haupt-Style-Block
    =========================================================== */
 
+
 /* -----------------------------------------------------------
    1. DESIGN TOKENS / VARIABLEN
    ----------------------------------------------------------- */
-/*@import url('https://googleapis.com');*/
 
 :root {
-    
     --color-stueck-202x-main: #c59e41;
     --color-stueck-202x-sub: #7a1f2b;
-
 
     --color-current-main: #FFEC73;
     --color-current-sub: #BA131A;
@@ -21,9 +20,9 @@
     --color-ewig-rauschen-die-gelder-main: #FFEC73;
     --color-ewig-rauschen-die-gelder-sub: #BA131A;
 
-/*    #048E5D --grün -ordner    */
-/*    #BA131A --rot  -plakat    */
-/*    #FFEC73 --gold -logo      */
+    /*    #048E5D --grün -ordner    */
+    /*    #BA131A --rot  -plakat    */
+    /*    #FFEC73 --gold -logo      */
 
     --color-zwei-luegen-main: #96c0e8;
     --color-zwei-luegen-sub: #003668;
@@ -72,9 +71,11 @@
     --color-unknown-sub: #333333;
 }
 
+
 /* -----------------------------------------------------------
    2. FONTS / IMPORTS
    ----------------------------------------------------------- */
+
 @import url('https://fonts.bunny.net/css2?family=DM+Sans:wght@300;400;500;700&display=swap');
 @import url('https://fonts.bunny.net/css2?family=Cinzel:wght@500;600;700&display=swap');
 @import url('https://fonts.bunny.net/css2?family=Libre+Baskerville:wght@700&display=swap');
@@ -93,10 +94,10 @@
 @import url('https://fonts.bunny.net/css2?family=Roboto+Slab:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap');
 
 
-
 /* -----------------------------------------------------------
    3. BASISSTYLES
    ----------------------------------------------------------- */
+
 html {
     overflow-y: scroll;
     -webkit-tap-highlight-color: #ffffff;
@@ -115,9 +116,11 @@ body {
     white-space: pre-line;
 }
 
+
 /* -----------------------------------------------------------
    4. TYPOGRAPHIE
    ----------------------------------------------------------- */
+
 h1 {
     font-size: 48px;
     font-weight: 1000;
@@ -136,18 +139,22 @@ h3 {
     text-align: center;
 }
 
+
 /* -----------------------------------------------------------
    5. LAYOUT / CONTAINER
    ----------------------------------------------------------- */
+
 .container {
     max-width: 1500px;
     margin: 0 auto;
     padding: 40px 20px;
 }
 
+
 /* -----------------------------------------------------------
    6. HEADER / NAVIGATION
    ----------------------------------------------------------- */
+
 .header {
     width: 100%;
     box-sizing: border-box;
@@ -216,9 +223,11 @@ nav a:hover {
     background: var(--color-current-main);
 }
 
+
 /* -----------------------------------------------------------
    7. COMPONENTS / BUTTONS / LINKS
    ----------------------------------------------------------- */
+
 .contact-links a {
     font-size: 17px;
     display: inline-block;
@@ -326,6 +335,7 @@ nav a:hover {
 /* -----------------------------------------------------------
    13. UX / INTERAKTIVE HILFEN
    ----------------------------------------------------------- */
+
 .btn,
 nav a,
 .gallery img,
@@ -363,10 +373,10 @@ a:active,
 }
 
 
-
 /* -----------------------------------------------------------
    15. ÜBER UNS
    ----------------------------------------------------------- */
+
 .about-hero {
     position: relative;
     width: 100%;
@@ -376,7 +386,6 @@ a:active,
     align-items: center;
     justify-content: center;
 }
-
 
 .about-content {
     max-width: 1500px;
@@ -470,7 +479,7 @@ a:active,
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap:4px;
+    gap: 4px;
     background: white;
     padding: 14px 18px;
     border-radius: 8px;
@@ -560,8 +569,8 @@ a:active,
     border-radius: 16px;
     padding: 30px;
     box-shadow:
-        0 4px 15px rgba(0,0,0,.08);
-    border: 1px solid rgba(0,0,0,.08);
+        0 4px 15px rgba(0, 0, 0, .08);
+    border: 1px solid rgba(0, 0, 0, .08);
 }
 
 .leadership-scroll {
@@ -604,8 +613,8 @@ a:active,
     background-image:
         repeating-linear-gradient(
             to right,
-            rgba(0,0,0,.08),
-            rgba(0,0,0,.08) 1px,
+            rgba(0, 0, 0, .08),
+            rgba(0, 0, 0, .08) 1px,
             transparent 1px,
             transparent 90px
         );
@@ -695,7 +704,7 @@ a:active,
     padding: 25px;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0 3px 10px rgba(0,0,0,.1);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .1);
 }
 
 .timeline-preview img {
@@ -723,7 +732,6 @@ a:active,
     margin: 0 auto 20px;
     line-height: 1.6;
 }
-
 
 .timeline-preview .btn {
     display: inline-block;
@@ -773,7 +781,7 @@ a:active,
 .popup-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,.6);
+    background: rgba(0, 0, 0, .6);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -788,7 +796,7 @@ a:active,
     border-radius: 16px;
     text-align: center;
     box-shadow:
-        0 10px 40px rgba(0,0,0,.3);
+        0 10px 40px rgba(0, 0, 0, .3);
 }
 
 .popup-box h2 {

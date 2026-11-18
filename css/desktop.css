@@ -165,26 +165,18 @@
     bottom: 20px;
     width: 50px;
     height: 50px;
-
     display: none;
     align-items: center;
     justify-content: center;
-
     border: none;
     border-radius: 50%;
-
     background: var(--color-current-sub);
     color: var(--color-current-main);
-
     font-size: 30px;
     font-weight: 700;
-
     cursor: pointer;
-
     box-shadow: 0 2px 8px rgba(0,0,0,.3);
-
     transition: .2s ease;
-
     z-index: 1000;
 }
 
@@ -208,46 +200,34 @@
 .leader-preview .timeline-preview {
     width: 100% !important;
     max-width: 100% !important;
-
     display: block;
     align-items: center;
     justify-content: center;
     gap: 24px;
-
     background: white;
-
     padding: 20px;
-
     border-radius: 12px;
-
     box-shadow: 0 2px 8px rgba(0,0,0,.1);
 }
 
 .leader-preview .timeline-preview img {
     width: 180px;
     max-width: 100%;
-
     display: block;
     margin: 0 auto 12px;
-
     border-radius: 10px;
 }
+
 .leader-preview .jahr {
     display: block;
-
     background: none !important;
     border: none !important;
     box-shadow: none !important;
-
     padding: 0 !important;
-
     font-size: 2rem;
     font-weight: 900;
-
     color: var(--color-current-sub);
-
     text-align: center;
-
     margin-bottom: 25px;
 }
 
@@ -260,16 +240,11 @@
 
 .view-btn {
     padding: 10px 18px;
-
     border: 2px solid var(--color-current-sub);
-
     background: white;
     color: var(--color-current-sub);
-
     border-radius: 8px;
-
     font-weight: 1000;
-
     cursor: pointer;
 }
 
@@ -286,11 +261,9 @@
     display: flex !important;
     justify-content: space-between !important;
     align-items: center !important;
-
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
-
     padding: 0 !important;
     border-radius: 0 !important;
 }
@@ -313,14 +286,10 @@
 .mobile-years summary {
     width: fit-content;
     margin: 0 auto;
-
     padding: 8px 14px;
-
     background: var(--color-current-sub);
     color: white;
-
     border-radius: 8px;
-
     cursor: pointer;
     font-weight: 700;
 }
@@ -337,19 +306,12 @@
 
 .mobile-year-list .year-dot {
     width: 100%;
-
     padding: 5px 10px;
-
     background:  white;
-
     border: 2px solid var(--color-current-sub);
-
     border-radius: 8px;
-
     color: var(--color-current-sub);
-
     font-weight: 700;
-
     cursor: pointer;
 }
 
@@ -366,14 +328,10 @@
 
 .leadership-wrapper {
     margin-top: 40px;
-
-    background: white;
-
+   background: white;
     border-radius: 16px;
     padding: 30px;
-
     border: 1px solid rgba(0,0,0,.08);
-
     box-shadow:
         0 4px 15px rgba(0,0,0,.08);
 }
@@ -397,22 +355,14 @@
 .leader-name {
     position: sticky;
     left: 0;
-
     background: white;
-
     z-index: 10;
-
     font-weight: 700;
-
     color: var(--color-current-sub);
-
     padding-right: 20px;
     padding-left: 10px;
-
     text-align: right;
-
     height: 32px;
-
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -421,11 +371,8 @@
 .timeline-track {
     display: grid;
     grid-template-columns: repeat(15, 90px);
-
     position: relative;
-
     height: 32px;
-
     background-image:
         repeating-linear-gradient(
             to right,
@@ -471,39 +418,28 @@
 
 .year-row {
     display: grid;
-
     grid-template-columns:
         280px
         repeat(15, 90px);
-
     min-width: 1540px;
-
     margin-top: 30px;
-
     border-top: 3px solid var(--color-current-sub);
-
     padding-top: 15px;
 }
 
 .year-spacer {
     position: sticky;
     left: 0;
-
     background: white;
-
     z-index: 10;
 }
 
 .year-dot {
     border: none;
     background: none;
-
     color: var(--color-current-sub);
-
     font-weight: bold;
-
     cursor: pointer;
-
     transition: .2s;
 }
 
@@ -515,11 +451,8 @@
 #timeline-piece-info {
     width: 70%;
     max-width: 700px;
-
     margin: 0 auto;
-
     text-align: center;
-
     padding-top: 20px;
 }
 
@@ -530,28 +463,19 @@
 .timeline-preview {
     width: 70%;
     max-width: 500px;
-
     margin: 0 auto;
-
     background: white;
-
     padding: 25px;
-
     border-radius: 12px;
-
     text-align: center;
-
     box-shadow: 0 3px 10px rgba(0,0,0,.1);
 }
 
 .timeline-preview img {
     width: 220px;
     max-width: 100%;
-
     display: block;
-
     margin: 0 auto 20px;
-
     border-radius: 10px;
 }
 
@@ -943,10 +867,8 @@
     inset: 0;
     z-index: 2000;
     display: none;
-
     justify-content: center;
     align-items: center;
-
     background: rgba(0,0,0,.9);
 }
 
