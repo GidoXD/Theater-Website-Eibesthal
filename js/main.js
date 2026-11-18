@@ -1893,6 +1893,50 @@ function initLeadershipViewToggle() {
 }
 
 // ===========================================================
+// POPUP
+// ===========================================================
+
+
+function initWelcomePopup() {
+
+    const popup =
+        document.getElementById(
+            "welcome-popup"
+        );
+
+    const close =
+        document.getElementById(
+            "popup-close"
+        );
+
+    if (!popup || !close) return;
+
+    if (
+        sessionStorage.getItem(
+            "popupSeen"
+        )
+    ) {
+
+        popup.style.display = "none";
+        return;
+    }
+
+    sessionStorage.setItem(
+        "popupSeen",
+        "true"
+    );
+
+    close.addEventListener(
+        "click",
+        () => {
+            popup.style.display = "none";
+        }
+    );
+
+}
+
+
+// ===========================================================
 // INITIALISIERUNG
 // ===========================================================
 
@@ -1906,6 +1950,7 @@ document.addEventListener(
         initArchiv();
         initLeadershipTimeline();
         initLeadershipViewToggle();
+        initWelcomePopup();
 
         const savedScroll =
             sessionStorage.getItem(
