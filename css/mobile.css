@@ -56,6 +56,125 @@
     }
 
     /* ===========================================================
+    TIMELINE / INDEX
+    =========================================================== */
+
+    .leader-preview .timeline-preview {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 10px 0 0 0 !important;
+
+        box-sizing: border-box !important;
+
+        padding: 15px !important;
+    }
+
+    .leader-preview .timeline-preview img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .leader-preview .jahr {
+        font-size: 1.8rem !important;
+
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+
+    .leader-preview .beschreibung {
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+
+    .timeline-preview {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        box-sizing: border-box;
+    }
+    .leader-entry {
+        overflow: hidden;
+    }
+
+    .leadership-view-toggle {
+        display: none;
+    }
+
+
+    .leadership-wrapper {
+        display: none;
+    }
+
+    .mobile-years {
+        display: block;
+        margin-top: 10px;
+    }
+
+    .mobile-years summary {
+        cursor: pointer;
+
+        padding: 8px 12px;
+
+        background: var(--color-current-sub);
+
+        color: white;
+
+        border-radius: 8px;
+
+        font-size: 0.95rem;
+        font-weight: 700;
+
+        text-align: center;
+    }
+
+    .mobile-years summary::-webkit-details-marker {
+        display: none;
+    }
+
+    .mobile-year-list {
+        display: flex;
+        flex-direction: column;
+
+        gap: 6px;
+
+        margin-top: 10px;
+    }
+
+    .mobile-year-list .year-dot {
+        width: 100%;
+
+        padding: 5px 10px;
+
+        background:  white;
+
+        border: 2px solid var(--color-current-sub);
+
+        border-radius: 8px;
+
+        color: var(--color-current-sub);
+
+        font-weight: 700;
+
+        cursor: pointer;
+    }
+
+    .mobile-year-list .year-dot:hover {
+        background: var(--color-current-main);
+        color: var(--color-current-sub);
+    }
+
+    #mobile-timeline-piece-info {
+        margin-top: 20px;
+    }
+
+    .mobile-year-list .year-dot {
+        padding: 6px 10px;
+        min-height: 32px;
+    }
+
+
+    /* ===========================================================
     HEADER / NAVIGATION
     =========================================================== */
 
@@ -468,4 +587,11 @@
     .about-highlight {
         font-size: 1.1rem;
     }
+
+    .timeline-preview,
+    .leader-preview,
+    .leader-entry {
+        border: none !important;
+    }
+
 }

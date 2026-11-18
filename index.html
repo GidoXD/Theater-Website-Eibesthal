@@ -147,30 +147,99 @@
             geleitet und geprägt.
           </p>
 
+          <div class="leadership-view-toggle">
+            <button
+                class="view-btn"
+                data-view="years">
+                Jahresliste
+            </button>
+            <button
+                class="view-btn active"
+                data-view="timeline">
+                Timeline
+            </button>
+        </div>
+
+        <div id="years-view">
           <div class="leadership-history">
-            <div>
-              <strong>Marlies Faber</strong>
-              <span>2026 – xxxx</span>
+
+            <div class="leader-entry">
+                <div class="leader-header">
+                  <strong>Marlies Faber</strong>
+                  <span>2026 – xxxx</span>
+                </div>
+                <details class="mobile-years">
+                    <summary>Jahre anzeigen</summary>
+                    <div class="mobile-year-list">
+                        <button class="year-dot" data-year="2026">2026</button>
+                    </div>
+                </details>
+                <div class="leader-preview"></div>
             </div>
 
-            <div>
-              <strong>Klara Schneider</strong>
-              <span>2024 – 2026</span>
+            <div class="leader-entry">
+                <div class="leader-header">
+                  <strong>Klara Schneider</strong>
+                  <span>2024 – 2026</span>
+                </div>
+                <details class="mobile-years">
+                    <summary>Jahre anzeigen</summary>
+                    <div class="mobile-year-list">
+                        <button class="year-dot" data-year="2025">2025</button>
+                        <button class="year-dot" data-year="2024">2024</button>
+                    </div>
+                </details>
+                <div class="leader-preview"></div>
             </div>
 
-            <div>
-              <strong>Leonhard Strobl</strong>
-              <span>2019 – 2024</span>
+            <div class="leader-entry">
+                <div class="leader-header">
+                  <strong>Leonhard Strobl</strong>
+                  <span>2019 – 2024</span>
+                </div>
+                <details class="mobile-years">
+                    <summary>Jahre anzeigen</summary>
+                    <div class="mobile-year-list">
+                        <button class="year-dot" data-year="2023">2023</button>
+                        <button class="year-dot" data-year="2022">2022</button>
+                        <button class="year-dot" data-year="2021">2021</button>
+                        <button class="year-dot" data-year="2020">2020</button>
+                        <button class="year-dot" data-year="2019">2019</button>
+                    </div>
+                </details>
+                <div class="leader-preview"></div>
             </div>
 
-            <div>
-              <strong>Johannes Stadlbacher</strong>
-              <span>2015 – 2019</span>
+            <div class="leader-entry">
+                <div class="leader-header">
+                  <strong>Johannes Stadlbacher</strong>
+                  <span>2015 – 2019</span>
+                </div>
+                <details class="mobile-years">
+                    <summary>Jahre anzeigen</summary>
+                    <div class="mobile-year-list">
+                        <button class="year-dot" data-year="2018">2018</button>
+                        <button class="year-dot" data-year="2017">2017</button>
+                        <button class="year-dot" data-year="2016">2016</button>
+                        <button class="year-dot" data-year="2015">2015</button>
+                    </div>
+                </details>
+                <div class="leader-preview"></div>
             </div>
 
-            <div>
-              <strong>Vinzenz Stadlbacher & Johannes Stadlbacher</strong>
-              <span>2013 – 2015</span>
+            <div class="leader-entry">
+                <div class="leader-header">
+                  <strong>Vinzenz Stadlbacher & Johannes Stadlbacher</strong>
+                  <span>2013 – 2015</span>
+                </div>
+                <details class="mobile-years">
+                    <summary>Jahre anzeigen</summary>
+                    <div class="mobile-year-list">
+                        <button class="year-dot" data-year="2014">2014</button>
+                        <button class="year-dot" data-year="2013">2013</button>
+                    </div>
+                </details>
+                <div class="leader-preview"></div>
             </div>
 
             <!--
@@ -180,103 +249,91 @@
               </div>
             -->
           </div>
+        </div> 
 
-          <div class="leadership-wrapper" id="leadership">
 
-            <div class="leadership-scroll">
+        <div class="leadership-wrapper" id="leadership">
 
-                <div class="leadership-table">
+          <div class="leadership-scroll">
 
-                    <div class="leader-row">
+              <div class="leadership-table">
 
-                        <div class="leader-name">
-                            Vinzenz & Johannes Stadlbacher
-                        </div>
+                  <div class="leader-row">
+                      <div class="leader-name">
+                          Vinzenz & Johannes Stadlbacher
+                      </div>
+                      <div class="timeline-track">
+                          <div class="bar vinzenz"></div>
+                      </div>
+                  </div>
 
-                        <div class="timeline-track">
-                            <div class="bar vinzenz"></div>
-                        </div>
+                  <div class="leader-row">
+                      <div class="leader-name">
+                          Johannes Stadlbacher
+                      </div>
+                      <div class="timeline-track">
+                          <div class="bar johannes"></div>
+                      </div>
+                  </div>
 
-                    </div>
+                  <div class="leader-row">
+                      <div class="leader-name">
+                          Leonhard Strobl
+                      </div>
+                      <div class="timeline-track">
+                          <div class="bar leonhard"></div>
+                      </div>
+                  </div>
 
-                    <div class="leader-row">
+                  <div class="leader-row">
+                      <div class="leader-name">
+                          Klara Schneider
+                      </div>
+                      <div class="timeline-track">
+                          <div class="bar klara"></div>
+                      </div>
+                  </div>
 
-                        <div class="leader-name">
-                            Johannes Stadlbacher
-                        </div>
+                  <div class="leader-row">
+                      <div class="leader-name">
+                          Marlies Faber
+                      </div>
+                      <div class="timeline-track">
+                          <div class="bar marlies"></div>
+                      </div>
+                  </div>
 
-                        <div class="timeline-track">
-                            <div class="bar johannes"></div>
-                        </div>
+                  <div class="year-row">
 
-                    </div>
+                      <div class="year-spacer"></div>
 
-                    <div class="leader-row">
+                      <button class="year-dot" data-year="2013">2013</button>
+                      <button class="year-dot" data-year="2014">2014</button>
+                      <button class="year-dot" data-year="2015">2015</button>
+                      <button class="year-dot" data-year="2016">2016</button>
+                      <button class="year-dot" data-year="2017">2017</button>
+                      <button class="year-dot" data-year="2018">2018</button>
+                      <button class="year-dot" data-year="2019">2019</button>
+                      <button class="year-dot" data-year="2020">2020</button>
+                      <button class="year-dot" data-year="2021">2021</button>
+                      <button class="year-dot" data-year="2022">2022</button>
+                      <button class="year-dot" data-year="2023">2023</button>
+                      <button class="year-dot" data-year="2024">2024</button>
+                      <button class="year-dot" data-year="2025">2025</button>
+                      <button class="year-dot" data-year="2026">2026</button>
+                      <button class="year-dot" data-year="2027">2027</button>
 
-                        <div class="leader-name">
-                            Leonhard Strobl
-                        </div>
+                  </div>
 
-                        <div class="timeline-track">
-                            <div class="bar leonhard"></div>
-                        </div>
+              </div>
 
-                    </div>
-
-                    <div class="leader-row">
-
-                        <div class="leader-name">
-                            Klara Schneider
-                        </div>
-
-                        <div class="timeline-track">
-                            <div class="bar klara"></div>
-                        </div>
-
-                    </div>
-
-                    <div class="leader-row">
-
-                        <div class="leader-name">
-                            Marlies Faber
-                        </div>
-
-                        <div class="timeline-track">
-                            <div class="bar marlies"></div>
-                        </div>
-
-                    </div>
-
-                    <div class="year-row">
-
-                        <div class="year-spacer"></div>
-
-                        <button class="year-dot" data-year="2013">2013</button>
-                        <button class="year-dot" data-year="2014">2014</button>
-                        <button class="year-dot" data-year="2015">2015</button>
-                        <button class="year-dot" data-year="2016">2016</button>
-                        <button class="year-dot" data-year="2017">2017</button>
-                        <button class="year-dot" data-year="2018">2018</button>
-                        <button class="year-dot" data-year="2019">2019</button>
-                        <button class="year-dot" data-year="2020">2020</button>
-                        <button class="year-dot" data-year="2021">2021</button>
-                        <button class="year-dot" data-year="2022">2022</button>
-                        <button class="year-dot" data-year="2023">2023</button>
-                        <button class="year-dot" data-year="2024">2024</button>
-                        <button class="year-dot" data-year="2025">2025</button>
-                        <button class="year-dot" data-year="2026">2026</button>
-                        <button class="year-dot" data-year="2027">2027</button>
-
-                    </div>
-
-                </div>
-
-            </div>
-            <div id="timeline-piece-info">
-                Wähle ein Jahr aus.
-            </div>
-
+          </div>
+          <div id="timeline-piece-info">
+              Wähle ein Jahr aus.
+          </div>
+      
         </div>
+
       </section>
 
 

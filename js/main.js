@@ -1414,6 +1414,12 @@ function initArchiv() {
                                 <a
                                     class="btn"
                                     href="stueck.html#stueck?id=${encodeURIComponent(stueck.id)}&from=archiv&jahr=${item.key}"
+                                    onclick="
+                                        sessionStorage.setItem(
+                                            'archivScroll',
+                                            window.scrollY
+                                        )
+                                    "
                                 >
                                     Details
                                 </a>
@@ -1510,6 +1516,29 @@ function initArchiv() {
     }
 
 
+    const savedScroll =
+        sessionStorage.getItem(
+            "archivScroll"
+        );
+
+    if (savedScroll) {
+
+        requestAnimationFrame(() => {
+
+            requestAnimationFrame(() => {
+
+                window.scrollTo(
+                    0,
+                    Number(savedScroll)
+                );
+
+            });
+
+        });
+
+    }
+
+
 }
 
 const scrollTopBtn =
@@ -1555,6 +1584,7 @@ function initLeadershipTimeline() {
                 const year =
                     Number(btn.dataset.year);
 
+                
                 const stueck =
                     stuecke.find(
                         s => Number(
@@ -1590,6 +1620,12 @@ function initLeadershipTimeline() {
                         <a
                             class="btn"
                             href="stueck.html#stueck?id=${stueck.id}&from=timeline&jahr=${stueck.jahr}"
+                            onclick="
+                                sessionStorage.setItem(
+                                    'indexScroll',
+                                    window.scrollY
+                                )
+                            "
                         >
                             Mehr erfahren
                         </a>
@@ -1600,6 +1636,225 @@ function initLeadershipTimeline() {
             });
 
         });
+
+
+    // ==========================================
+    // Mobile Jahre auf-/zuklappen
+    // ==========================================
+
+    document
+    .querySelectorAll(".mobile-years")
+    .forEach(details => {
+
+        details.addEventListener("toggle", () => {
+
+            const preview =
+                details.closest(".leader-entry")
+                       .querySelector(".leader-preview");
+
+            if (!details.open) {
+
+                if (preview) {
+                    preview.innerHTML = "";
+                }
+
+                document
+                    .querySelectorAll(
+                        ".mobile-year-list .year-dot"
+                    )
+                    .forEach(btn =>
+                        btn.classList.remove("active")
+                    );
+
+                return;
+            }
+
+            document
+                .querySelectorAll(".mobile-years")
+                .forEach(other => {
+
+                    if (other !== details) {
+                        other.removeAttribute("open");
+                    }
+
+                });
+
+            document
+                .querySelectorAll(".leader-preview")
+                .forEach(preview => {
+                    preview.innerHTML = "";
+                });
+
+            document
+                .querySelectorAll(
+                    ".mobile-year-list .year-dot"
+                )
+                .forEach(btn =>
+                    btn.classList.remove("active")
+                );
+
+        });
+
+    });
+
+    // ==========================================
+    // Mobile Jahresbuttons
+    // ==========================================
+
+    document
+        .querySelectorAll(".mobile-year-list .year-dot")
+        .forEach(btn => {
+
+            btn.addEventListener("click", () => {
+
+                const year =
+                    Number(btn.dataset.year);
+
+                document
+                    .querySelectorAll(".mobile-year-list .year-dot")
+                    .forEach(b => b.classList.remove("active"));
+
+                btn.classList.add("active");
+
+
+                const stueck =
+                    stuecke.find(
+                        s => Number(
+                            s.timelineJahr || s.jahr
+                        ) === year
+                    );
+
+                const mobileInfo =
+                    btn.closest(".leader-entry")
+                        .querySelector(".leader-preview");
+
+                if (!mobileInfo) return;
+
+                if (!stueck) {
+
+                    mobileInfo.innerHTML = `
+                        <h3>${year}</h3>
+                        <p>
+                            Für dieses Jahr wurde noch kein Stück hinterlegt.
+                        </p>
+                    `;
+
+                    return;
+                }
+
+                document
+                    .querySelectorAll(".leader-preview")
+                    .forEach(preview => {
+                        preview.innerHTML = "";
+                });
+
+                mobileInfo.innerHTML = `
+                    <div class="timeline-preview">
+
+                        <div class="jahr">
+                            ${stueck.jahr} - ${stueck.titel}
+                        </div>
+
+                        <img
+                            src="plakate/${stueck.id}-plakat.jpg"
+                            alt="${stueck.titel}"
+                        >
+
+                        <p class="beschreibung">
+                            ${
+                                stueck.beschreibung
+                                    ? stueck.beschreibung.substring(0, 220) + "..."
+                                    : ""
+                            }
+                        </p>
+
+                        <a
+                            class="btn"
+                            href="stueck.html#stueck?id=${stueck.id}&from=timeline&jahr=${stueck.jahr}"
+                            onclick="
+                                sessionStorage.setItem(
+                                    'indexScroll',
+                                    window.scrollY
+                                )
+                            "
+                        >
+                            Mehr erfahren
+                        </a>
+
+                    </div>
+                `;
+
+            });
+
+        });
+
+
+}
+
+// ===========================================================
+// TOGGLE LEADERSHIP VIEW
+// ===========================================================
+
+function initLeadershipViewToggle() {
+
+    const timeline =
+        document.querySelector(".leadership-wrapper");
+
+    const years =
+        document.getElementById("years-view");
+
+    if (!timeline || !years) return;
+
+    const buttons =
+        document.querySelectorAll(".view-btn");
+
+    buttons.forEach(btn => {
+
+        btn.addEventListener("click", () => {
+
+            buttons.forEach(
+                b => b.classList.remove("active")
+            );
+
+            btn.classList.add("active");
+
+            if (
+                btn.dataset.view === "timeline"
+            ) {
+
+                timeline.style.display =
+                    "block";
+
+                years.style.display =
+                    "none";
+
+            }
+
+            else {
+
+                timeline.style.display =
+                    "none";
+
+                years.style.display =
+                    "block";
+
+            }
+        });
+
+    });
+
+        // Standardansicht
+
+    timeline.style.display = "none";
+    years.style.display = "block";
+
+    buttons.forEach(
+        b => b.classList.remove("active")
+    );
+
+    document
+        .querySelector('[data-view="years"]')
+        ?.classList.add("active");
 
 }
 
@@ -1612,14 +1867,38 @@ document.addEventListener(
     () => {
 
         initAktuellesStueck();
-
         initCurrentPage();
-
         initStueck();
-
         initArchiv();
-
         initLeadershipTimeline();
+        initLeadershipViewToggle();
+
+        const savedScroll =
+            sessionStorage.getItem(
+                "indexScroll"
+            );
+
+        if (
+            savedScroll &&
+            location.pathname.includes(
+                "index"
+            )
+        ) {
+
+            setTimeout(() => {
+
+                window.scrollTo(
+                    0,
+                    Number(savedScroll)
+                );
+
+                sessionStorage.removeItem(
+                    "indexScroll"
+                );
+
+            }, 300);
+
+        }
 
     }
 );
