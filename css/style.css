@@ -733,3 +733,34 @@ a:active,
     color: var(--color-current-sub);
 }
 
+.ticket-info {
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    background: white;
+
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    color: var(--color-current-sub);
+}
+
+.ticket-info strong {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.ticket-info a {
+
+    color: var(--color-current-sub);
+
+    font-size: 1.2rem;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}

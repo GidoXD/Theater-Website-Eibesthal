@@ -231,12 +231,29 @@ function initAktuellesStueck() {
                     ${termineHTML}
                 </p>
 
+                ${
+                    neuestes.jahr == 2026
+                    ? `
+                        <div class="ticket-info">
+                            <strong>
+                                Hier kann man ab 1. Dezember 2026 Karten reservieren:
+                            </strong>
+                            <br>
+                            <a href="tel:+4367761982904">
+                                0677 619 829 04
+                            </a>
+                        </div>
+                    `
+                    : ""
+                }
+
                 <a
                     class="btn"
                     href="stueck.html#stueck?id=${encodeURIComponent(neuestes.id)}&from=current"
                 >
                     Mehr Infos
                 </a>
+
 
             </div>
 
@@ -335,12 +352,29 @@ function initCurrentPage() {
                     ${termineHTML}
                 </p>
 
+                ${
+                    neuestes.jahr == 2026
+                    ? `
+                        <div class="ticket-info">
+                            <strong>
+                                Hier kann man ab 1. Dezember 2026 Karten reservieren:
+                            </strong>
+                            <br>
+                            <a href="tel:+4367761982904">
+                                0677 619 829 04
+                            </a>
+                        </div>
+                    `
+                    : ""
+                }
+
                 <a
                     class="btn"
                     href="stueck.html#stueck?id=${encodeURIComponent(neuestes.id)}&from=current"
                 >
                     Mehr Infos
                 </a>
+
 
             </div>
 
