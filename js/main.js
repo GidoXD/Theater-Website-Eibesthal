@@ -236,7 +236,7 @@ function initAktuellesStueck() {
                     ? `
                         <div class="ticket-info">
                             <strong>
-                                Hier kann man ab 1. Dezember 2026 Karten reservieren:
+                                Hier können Sie ab dem 1. Dezember 2026 Karten reservieren:
                             </strong>
                             <br>
                             <a href="tel:+4367761982904">
@@ -357,7 +357,7 @@ function initCurrentPage() {
                     ? `
                         <div class="ticket-info">
                             <strong>
-                                Hier kann man ab 1. Dezember 2026 Karten reservieren:
+                                Hier können Sie ab dem 1. Dezember 2026 Karten reservieren:
                             </strong>
                             <br>
                             <a href="tel:+4367761982904">
