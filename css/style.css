@@ -790,7 +790,7 @@ a:active,
 
 .popup-box {
     position: relative;
-    width: min(90%, 500px);
+    width: min(90%, 600px);
     padding: 22px 22px;
     background: white;
     border-radius: 16px;
@@ -811,6 +811,17 @@ a:active,
     top: 12px;
     background: none;
     border: none;
-    font-size: 22px;
+    font-size: 20px;
     cursor: pointer;
 }
+
+.popup-poster {
+    width: 220px;
+    max-width: 100%;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow:
+        0 4px 15px rgba(0,0,0,.25);
+}
+

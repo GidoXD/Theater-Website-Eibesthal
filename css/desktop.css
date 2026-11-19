@@ -189,6 +189,72 @@
    TIMELINE
    =========================================================== */
 
+.leadership-view-toggle {
+    display: grid;
+    grid-template-columns:
+        fr
+        auto
+        fr;
+    align-items: center;
+    width: 100%;
+    margin: 35px auto;
+}
+
+.toggle-label {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 800;
+    width: 200px;
+    color: var(--color-current-sub);
+}
+
+.toggle-switch {
+    display: flex;
+    justify-content: center;
+}
+
+.switch {
+    position: relative;
+    width: 80px;
+    height: 34px;
+    display: inline-block;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    inset: 0;
+    background: #d8d8d8;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    left: 4px;
+    top: 4px;
+    background: white;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+.switch input:checked + .slider {
+    background: var(--color-current-sub);
+}
+
+.switch input:checked + .slider::before {
+    transform: translateX(46px);
+}
+
+
+
 .leader-preview {
     margin-top: 15px;
 }

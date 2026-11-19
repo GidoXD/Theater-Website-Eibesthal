@@ -34,7 +34,7 @@ const stuecke = [
     jahr:"2026",
     insta: "",
     trailer: "",
-    beschreibung: `Der Vorhang hebt sich wieder.<br><br>Freuen Sie sich auf ein neues Stück im Winter 2026.<br>Weitere Informationen folgen`,
+    beschreibung: `Der Vorhang hebt sich wieder.<br><br>Freuen Sie sich auf ein neues Stück im Winter 2026.<br>Weitere Informationen folgen!`,
     besetzung: ["Tobias Schöfbeck - to be confirmed","Klara Schneider - to be confirmed","Johannes Schneider - to be confirmed","Fabian Wolf - to be confirmed","Lorenz Schneider - to be confirmed","Marlies Faber - to be confirmed","Eldrid Liebminger - to be confirmed","Valerie Prinz - to be confirmed","Mathias Strobl - to be confirmed","Julia Scheiner - to be confirmed"],
     termine:["FR 25.12.2026 - 19 Uhr","SO 27.12.2026 - 18 Uhr","SA 02.01.2027 - 19 Uhr","SO 03.01.2027 - 18 Uhr","DI 05.01.2027 - 19 Uhr","FR 08.01.2027 - 19 Uhr"],
     spielort:"2130 Eibesthal, im Saal unter der Kirche"

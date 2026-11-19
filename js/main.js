@@ -1832,35 +1832,44 @@ function initLeadershipTimeline() {
 function initLeadershipViewToggle() {
 
     const timeline =
-        document.querySelector(".leadership-wrapper");
+        document.querySelector(
+            ".leadership-wrapper"
+        );
 
     const years =
-        document.getElementById("years-view");
+        document.getElementById(
+            "years-view"
+        );
 
-    if (!timeline || !years) return;
+    const toggle =
+        document.getElementById(
+            "leadershipToggle"
+        );
 
-    const buttons =
-        document.querySelectorAll(".view-btn");
+    if (
+        !timeline ||
+        !years ||
+        !toggle
+    ) return;
 
-    buttons.forEach(btn => {
+    // Standard = Jahresliste
 
-        btn.addEventListener("click", () => {
+    years.style.display = "block";
+    timeline.style.display = "none";
 
-            buttons.forEach(
-                b => b.classList.remove("active")
-            );
+    toggle.checked = false;
 
-            btn.classList.add("active");
+    toggle.addEventListener(
+        "change",
+        () => {
 
-            if (
-                btn.dataset.view === "timeline"
-            ) {
-
-                timeline.style.display =
-                    "block";
+            if (toggle.checked) {
 
                 years.style.display =
                     "none";
+
+                timeline.style.display =
+                    "block";
 
             }
 
@@ -1873,29 +1882,14 @@ function initLeadershipViewToggle() {
                     "block";
 
             }
-        });
 
-    });
-
-        // Standardansicht
-
-    timeline.style.display = "none";
-    years.style.display = "block";
-
-    buttons.forEach(
-        b => b.classList.remove("active")
+        }
     );
-
-    document
-        .querySelector('[data-view="years"]')
-        ?.classList.add("active");
-
 }
 
 // ===========================================================
 // POPUP
 // ===========================================================
-
 
 function initWelcomePopup() {
 
@@ -1909,14 +1903,19 @@ function initWelcomePopup() {
             "popup-close"
         );
 
-    if (!popup || !close) return;
+    const popupContent =
+        document.getElementById(
+            "popup-content"
+        );
+
+    if (!popup || !close || !popupContent
+    ) return;
 
     if (
         sessionStorage.getItem(
             "popupSeen"
         )
     ) {
-
         popup.style.display = "none";
         return;
     }
@@ -1925,6 +1924,25 @@ function initWelcomePopup() {
         "popupSeen",
         "true"
     );
+
+    const neuestes =
+        [...stuecke].sort(
+            (a, b) => Number(b.jahr) - Number(a.jahr)
+        )[0];
+
+    popupContent.innerHTML = `
+        <img
+            class="popup-poster"
+            src="plakate/${neuestes.id}-plakat.jpg"
+            alt="${neuestes.titel}"
+        >
+        <a
+            class="btn"
+            href="currentplay.html"
+        >
+            Zum Stück
+        </a>
+    `;
 
     close.addEventListener(
         "click",

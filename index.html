@@ -49,9 +49,7 @@
           <section class="container section">
 
             <div class="about-section">
-
               <h2>Eine Tradition seit über 70 Jahren</h2>
-
               <p>
                 Seit über 70 Jahren bringt das Theater Eibesthal
                 jedes Jahr ein neues Theaterstück auf die Bühne.
@@ -59,19 +57,16 @@
                 festen Tradition in Eibesthal und zu einem wichtigen
                 Bestandteil des örtlichen Kulturlebens.
               </p>
-
               <p>
                 Mit viel Freude am Schauspiel, großem persönlichen
                 Einsatz und zahlreichen helfenden Händen entsteht
                 jedes Jahr eine neue Produktion.
               </p>
-
               <p>
                 Unsere Aufführungen finden im
                 <strong>Saal unter der Kirche in Eibesthal</strong>
                 statt.
               </p>
-
             </div>
 
           </section>
@@ -81,28 +76,23 @@
           <section class="container section">
 
             <div class="about-section">
-
               <h2>Einmal im Jahr heißt es: Vorhang auf!</h2>
-
               <p>
                 Jedes Jahr wird ein neues Stück ausgewählt,
                 einstudiert und mit viel Engagement auf die Bühne
                 gebracht.
               </p>
-
               <p>
                 Von den ersten Proben bis zur Premiere vergehen
                 viele Wochen und Monate. Dabei wird nicht nur
                 gemeinsam gespielt, sondern auch geplant,
                 gebaut, organisiert und vorbereitet.
               </p>
-
               <p>
                 So entstehen jedes Jahr aufs Neue viele unvergessliche Theaterabende,
                 die wir gemeinsam mit unserem Publikum erleben
                 dürfen.
               </p>
-
             </div>
 
           </section>
@@ -118,21 +108,16 @@
                 Team, das sich um die Organisation und Durchführung
                 der jährlichen Aufführungen kümmert.
               </p>
-
               <div class="about-leadership">
-
                 <div class="about-person">
                   <h3>Marlies Faber</h3>
                   <p>Leitung</p>
                 </div>
-
                 <div class="about-person">
                   <h3>Fabian Wolf</h3>
                   <p>Stellvertretende Leitung</p>
                 </div>
-
               </div>
-
               <p>
                 Im Laufe der vergangenen Jahre wurde das Theater
                 von verschiedenen engagierten Mitgliedern der Katholischen Jugend Eibesthal
@@ -140,16 +125,21 @@
               </p>
 
               <div class="leadership-view-toggle">
-                <button
-                    class="view-btn"
-                    data-view="years">
+                <div class="toggle-label">
                     Jahresliste
-                </button>
-                <button
-                    class="view-btn active"
-                    data-view="timeline">
+                </div>
+
+                <label class="switch">
+                    <input
+                        type="checkbox"
+                        id="leadershipToggle"
+                    >
+                    <span class="slider"></span>
+                </label>
+
+                <div class="toggle-label">
                     Timeline
-                </button>
+                </div>
             </div>
 
             <div id="years-view">
@@ -467,19 +457,9 @@
 
     <div id="welcome-popup" class="popup-overlay">
       <div class="popup-box">
-          <button id="popup-close">
-              ✕
-          </button>
+          <button id="popup-close">✕</button>
           <h2>Unser diesjähriges Stück</h2>
-          <p>
-              Entdecke jetzt unser aktuelles Stück 2026:
-          </p>
-          <a
-              class="btn"
-              href="currentplay.html"
-          >
-              Zum Stück
-          </a>
+          <div id="popup-content"></div>
       </div>
     </div>
 
